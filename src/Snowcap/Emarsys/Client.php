@@ -654,7 +654,6 @@ class Client {
         $headers = array('Content-Type: application/json', 'X-WSSE: ' . $this->getAuthenticationSignature());
         $uri = $this->baseUrl . $uri;
 
-        print_r($body);
         try {
             $responseJson = $this->client->send($method, $uri, $headers, $body);
         } catch (\Exception $e) {
